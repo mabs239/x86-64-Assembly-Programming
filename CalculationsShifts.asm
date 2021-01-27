@@ -26,7 +26,7 @@ section .text
 main:
 	push	rbp
 	mov 	rbp,rsp
-      sub 	rsp,32   		;shadow space
+        sub 	rsp,32   		;shadow space
 ; displaying the numbers
 	mov	rcx, fmt
 	mov	rdx, [number1]
@@ -62,7 +62,7 @@ main:
 ; decrementing-----------------------------------------------------------------
 	mov	rax, [number1]
 	dec	rax			; decrement rax with 1
-      mov	[resulti], rax
+        mov	[resulti], rax
 	; displaying the result
 	mov	rcx, fmtint
 	mov	rdx, deci
@@ -111,10 +111,10 @@ main:
 	mov [resulti], rax
   	mov [modulo], rdx	; rdx to modulo
 	; displaying the result
-      mov rcx, fmtint
+        mov rcx, fmtint
 	mov	rdx, divi
 	mov	r8, [resulti]
-      mov	rax, 0
+        mov	rax, 0
 	call printf
 	mov	rcx, fmtint
 	mov	rdx, remi
