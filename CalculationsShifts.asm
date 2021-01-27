@@ -27,93 +27,83 @@ main:
 	push	rbp
 	mov 	rbp,rsp
       sub 	rsp,32   		;shadow space
-
 ; displaying the numbers
-		mov	rcx, fmt
-		mov	rdx, [number1]
-		mov	r8, [number2]
-		mov	r9, 0
-		call 	printf      
+	mov	rcx, fmt
+	mov	rdx, [number1]
+	mov	r8, [number2]
+	call 	printf      
 ; adding---------------------------------------------------------------------
 	mov	rax, [number1]
 	add	rax, [number2]		; add number2 to rax
 	mov	[resulti], rax		; move sum to result
 	; displaying the result
-		mov	rcx, fmtint
-		mov	rdx, sumi
-		mov	r8, [resulti]
-		mov	r9, 0
-		call printf
+	mov	rcx, fmtint
+	mov	rdx, sumi
+	mov	r8, [resulti]
+	call printf
 ; substracting---------------------------------------------------------------
 	mov	rax, [number1]
 	sub	rax, [number2]		; subtract number2 from rax
 	mov	[resulti], rax
 	; displaying the result
-		mov	rcx, fmtint
-		mov	rdx, difi
-		mov	r8, [resulti]
-		mov	r9, 0
-		call printf
+	mov	rcx, fmtint
+	mov	rdx, difi
+	mov	r8, [resulti]
+	call printf
 ; incrementing----------------------------------------------------------------- 
 	mov	rax, [number1]
 	inc	rax			; increment rax with 1
 	mov	[resulti], rax
 	; displaying the result
-		mov	rcx, fmtint
-		mov	rdx, inci
-		mov	r8, [resulti]
-		mov	r9, 0
-		call printf
+	mov	rcx, fmtint
+	mov	rdx, inci
+	mov	r8, [resulti]
+	call printf
 ; decrementing-----------------------------------------------------------------
 	mov	rax, [number1]
 	dec	rax			; decrement rax with 1
-        mov	[resulti], rax
+      mov	[resulti], rax
 	; displaying the result
-		mov	rcx, fmtint
-		mov	rdx, deci
-		mov	r8, [resulti]
-		mov	r9, 0
-		call printf
+	mov	rcx, fmtint
+	mov	rdx, deci
+	mov	r8, [resulti]
+	call printf
 ; shift arithmetic left------------------------------------------------------
 	mov	rax, [number1]
 	sal	rax, 2			; multiply rax by 4
 	mov	[resulti], rax
 	; displaying the result
-		mov	rcx, fmtint
-		mov	rdx, sali
-		mov	r8, [resulti]
-		mov	r9, 0
-		call printf
+	mov	rcx, fmtint
+	mov	rdx, sali
+	mov	r8, [resulti]
+	call printf
 ; shift arithmetic right------------------------------------------------------
 	mov	rax, [number1]
 	sar	rax, 2			; divide rax by 4
 	mov	[resulti], rax
 	; displaying the result
-		mov	rcx, fmtint
-		mov	rdx, sari
-		mov	r8, [resulti]
-		mov	r9, 0
-		call 	printf
+	mov	rcx, fmtint
+	mov	rdx, sari
+	mov	r8, [resulti]
+	call 	printf
 ; shift arithmetic right with sign extension ---------------------------------
 	mov	rax, [neg_num]
 	sar	rax, 2			; divide rax by 4
 	mov	[resulti], rax
 	; displaying the result
-		mov	rcx, fmtint
-		mov	rdx, sariex
-		mov	r8, [resulti]
-		;mov	r9, 0
-		call 	printf
+	mov	rcx, fmtint
+	mov	rdx, sariex
+	mov	r8, [resulti]
+	call 	printf
 ; multiply-------------------------------------------------------------------
 	mov		rax, [number1]
 	imul	qword [number2]		; multiply rax with number2
 	mov		[resulti], rax
 	; displaying the result
-		mov	rcx, fmtint
-		mov	rdx, multi
-		mov	r8, [resulti]
-		;mov	rax, 0
-		call 	printf
+	mov	rcx, fmtint
+	mov	rdx, multi
+	mov	r8, [resulti]
+	call printf
 ; divide---------------------------------------------------------------------
 	mov rax, [number1]
  	mov rdx, 0			; rdx needs to be 0 before idiv
@@ -121,16 +111,16 @@ main:
 	mov [resulti], rax
   	mov [modulo], rdx	; rdx to modulo
 	; displaying the result
-       mov rcx, fmtint
+      mov rcx, fmtint
 	mov	rdx, divi
 	mov	r8, [resulti]
-       mov	rax, 0
-		call 	printf
-		mov	rcx, fmtint
-		mov	rdx, remi
-		mov	r8, [modulo]
-		mov	rax, 0
-		call 	printf  
+      mov	rax, 0
+	call printf
+	mov	rcx, fmtint
+	mov	rdx, remi
+	mov	r8, [modulo]
+	mov	rax, 0
+	call printf  
 mov rsp,rbp
 pop rbp
 ret
