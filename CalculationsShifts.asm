@@ -114,12 +114,10 @@ main:
         mov rcx, fmtint
 	mov	rdx, divi
 	mov	r8, [resulti]
-        mov	rax, 0
-	call printf
+        call printf
 	mov	rcx, fmtint
 	mov	rdx, remi
 	mov	r8, [modulo]
-	mov	rax, 0
 	call printf  
 mov rsp,rbp
 pop rbp
