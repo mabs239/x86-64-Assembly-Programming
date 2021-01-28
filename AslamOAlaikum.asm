@@ -9,8 +9,8 @@
 msg1	db		"Aslam O Alaikum!",0	
 	section 	.bss	
 	section 	.text	
-main:
-    	push		rbp
+
+main:  	push		rbp
     	mov		rbp,rsp
     	sub		rsp, 32    
     	
