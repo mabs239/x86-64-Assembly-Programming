@@ -10,13 +10,13 @@ msg1	db		"Aslam O Alaikum!",0
 	section 	.bss	
 	section 	.text	
 main:
-    	push	rbp
-    	mov	rbp,rsp
-    	sub	rsp, 32    
+    	push		rbp
+    	mov		rbp,rsp
+    	sub		rsp, 32    
     	
-	mov	rcx, msg1
-    	call	printf	
+	mov		rcx, msg1
+    	call		printf	
     	
-	mov	rsp,rbp
-    	pop	rbp
+	mov		rsp,rbp
+    	pop		rbp
     	ret
