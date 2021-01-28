@@ -28,19 +28,18 @@ factorial:
     push    rbp
     mov     rbp, rsp
     sub     rsp, 32
-        
-        cmp     rcx, 1; n == 1?
-        jnz recursion;If n>1, recursive call
-        mov rax, 1; factorial(1) = 1
-        jmp factend
-recursion:
-        push rcx; save n
-        dec rcx; n = n-1
-        call factorial; factorial(n-1)
-        pop rcx; restore n
-        mul rcx; n*factorial(n-1)
 
-factend:
+    cmp     rcx, 1      ; n == 1?
+    jnz     recursion   ;If n>1, recursive call
+    mov     rax, 1      ;factorial(1) = 1
+    jmp     exit
+recursion:
+    push    rcx         ;save n
+    dec     rcx         ;n = n-1
+    call    factorial   ;factorial(n-1)
+    pop     rcx         ;restore n
+    mul     rcx         ;n*factorial(n-1)
+exit:
     leave
-            ret  
+    ret  
     
