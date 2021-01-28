@@ -20,7 +20,7 @@ main:
     
     mov		rcx, fmtstr	
     mov		rdx, msg1
-    call	rintf	
+    call	printf	
     
     mov		rcx, fmtstr
     mov		rdx, msg2
