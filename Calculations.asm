@@ -119,7 +119,8 @@ main:
 	mov	rdx, remi
 	mov	r8, [modulo]
 	call 	printf  
-mov rsp,rbp
-pop rbp
-ret
+	
+	mov 	rsp,rbp
+	pop rbp
+	ret
 		
