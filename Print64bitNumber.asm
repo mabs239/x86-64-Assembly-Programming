@@ -1,11 +1,9 @@
 global main
 extern printf
-
 segment .data
-    fmt db "Number is: %llu",0;  long long unsignd integer
-    number dq 0ffffffffffffffffh
+    fmt     db  "Number is: %llu",0;  long long unsignd integer
+    number  dq  0ffffffffffffffffh
 segment .text
-
 main:
     push    rbp
     mov     rbp, rsp
