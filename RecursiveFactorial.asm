@@ -5,10 +5,10 @@
 global main
 global factorial
 extern printf
-segment .data
+section .data
     fmt     db          "Factorial is: %llu",0  
                         ;llu=long-long-unsignd integer (64 bit)
-segment .text
+section .text
 main:
     push    rbp
     mov     rbp, rsp
