@@ -13,7 +13,6 @@ section .data
 	fmtint	db	"%d",10,0 ;format for an integer 
 section .bss	
 section .text	
-extern	printf	
 main:
     push	rbp
     mov		rbp,rsp
