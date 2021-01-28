@@ -1,10 +1,9 @@
 global main						
 extern printf
 section .data				
-    pi	dq 3.141592653589793238					
-    radius dq 11.0
-    fmt dq "Pi=%.18f  radius=%f  area=%f",10,0 
-section .bss													
+    pi		dq 	3.141592653589793238					
+    radius 	dq 	11.0
+    fmt 	dq 	"Pi=%.18f  radius=%f  area=%f",10,0 											
 section .text									
 main:
     push	rbp
@@ -18,11 +17,11 @@ main:
     movq 	xmm1, [radius]
     movq  	r8,xmm1	
 
-    movq xmm2, [pi]
-    mulsd  xmm2, xmm1; pi*r
-    mulsd  xmm2, xmm1; pi * r^2
+    movq 	xmm2, [pi]
+    mulsd  	xmm2, xmm1; pi*r
+    mulsd  	xmm2, xmm1; pi * r^2
     movq  	r9,xmm2	         
-    call printf
+    call 	printf
 
     add rsp, 32			  	
     leave
