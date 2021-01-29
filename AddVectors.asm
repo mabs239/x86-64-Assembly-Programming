@@ -53,7 +53,7 @@ main:
     
     	mov 		rsi, DoublePrecisionVector2
     	mov 		rcx, fmt5
-    	call 		rintDoublePrecisionVector 
+    	call 		printDoublePrecisionVector 
         
     	movupd 		xmm0, [DoublePrecisionVector1]          
     	movupd 		xmm1, [DoublePrecisionVector2]            
@@ -74,7 +74,7 @@ printSinglePrecisionVector:
 	mov	 	rbp, rsp
 
     	movss 		xmm0, [rsi]
-	cvtss2sd 	xmm0, xmm0
+	cvtss2sd 	xmm0, xmm0	;convert scalar single to scalar double
        	movq		rdx, xmm0	;duplicate values in rcx~r9 requiered
 
 	movss	 	xmm1, [rsi+4]
