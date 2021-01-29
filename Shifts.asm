@@ -1,3 +1,8 @@
+;All praise be to Almighty Allah 
+;and peace and countless blessings
+;of Allah be upon our beloved 
+;Prophet Muhammad!
+
 extern printf
 section .data
 	msgn1	db	"Number 1 is = %d",10,0
