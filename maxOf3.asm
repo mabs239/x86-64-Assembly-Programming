@@ -1,7 +1,7 @@
-
 ;All praise be to Almighty Allah 
 ;and countless blessings of Allah
 ;be upon his beloved Prophet Muhammad
+
 global main
 extern printf
 
