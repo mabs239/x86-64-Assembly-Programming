@@ -17,3 +17,5 @@ file.exe
 | XMM0  | XMM0 |
 | TO |  TO   |
 | XMM7  | XMM3    |
+
+x64 Instructions Explained: https://www.officedaytime.com/simd512e/
