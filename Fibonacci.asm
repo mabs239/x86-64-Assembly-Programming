@@ -1,3 +1,8 @@
+;All praise be to Almighty Allah 
+;and peace and countless blessings
+;of Allah be upon our beloved 
+;Prophet Muhammad!
+
 global main
 extern printf
 section .data
