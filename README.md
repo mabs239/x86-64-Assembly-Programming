@@ -9,3 +9,11 @@ file.exe
 | Linux| Windows|
 | ---- |:------:|
 | RDI  | RCX    |
+| RSI  | RDX    |
+| RDX  | R8     |
+| RCX  | R9    |
+|  R8  | STACK |
+|  R9  | STACK |
+| XMM0  | XMM0 |
+| TO |  TO   |
+| XMM7  | XMM3    |
