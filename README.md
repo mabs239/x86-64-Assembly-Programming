@@ -1,3 +1,8 @@
+All praise be to Almighty Allah 
+and peace and countless blessings
+of Allah be upon our beloved 
+Prophet Muhammad!
+
 # x86-64-Assembly-Programming
 
 nasm -f win64 -g file.asm -l file.lst 
