@@ -10,8 +10,8 @@ section     .bss
 section     .text	
 main:
     push    rbp
-    mov	    rbp,rsp
-    sub	    rsp, 32    
+    mov     rbp,rsp
+    sub     rsp, 32    
     leave
     ret
 
