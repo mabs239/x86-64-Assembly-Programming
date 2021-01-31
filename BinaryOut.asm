@@ -16,9 +16,9 @@ main:
     ret
 
 printReg:    
-    push	rbp
-    mov		rbp,rsp
-    sub		rsp, 32   
+    push    rbp
+    mov     rbp,rsp
+    sub     rsp, 32   
     mov     r13, 64     ;loopcount
     mov     r12, rcx
 
