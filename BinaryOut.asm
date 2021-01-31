@@ -12,6 +12,10 @@ main:
     push    rbp
     mov     rbp,rsp
     sub     rsp, 32    
+    
+    mov     rcx, 0ff0fh
+    call    printReg 
+    
     leave
     ret
 
