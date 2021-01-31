@@ -13,14 +13,26 @@ file.exe
 
 | Linux| Windows|
 | ---- |:------:|
-| RDI  | RCX    |
-| RSI  | RDX    |
-| RDX  | R8     |
+| RDI  | RCX   |
+| RSI  | RDX   |
+| RDX  | R8    |
 | RCX  | R9    |
 |  R8  | STACK |
 |  R9  | STACK |
-| XMM0  | XMM0 |
-| TO |  TO   |
-| XMM7  | XMM3    |
+| XMM0 | XMM0  |
+| TO   |  TO   |
+| XMM7 | XMM3  |
 
+
+|Volatile| Non-Volatile|
+|--------|:-----------:|
+|RAX|RBX|
+|RCX|RBP|
+|RDX|RDI|
+|R8|RSI|
+|R9|RSP|
+|R10|R12|
+|R11|R13|
+||R14|
+||R15|
 x64 Instructions Explained: https://www.officedaytime.com/simd512e/
