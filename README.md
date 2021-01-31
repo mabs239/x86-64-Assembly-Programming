@@ -25,7 +25,7 @@ file.exe
 
 
 |Volatile| Non-Volatile|
-|--------|:-----------:|
+|:------:|:-----------:|
 |RAX|RBX|
 |RCX|RBP|
 |RDX|RDI|
